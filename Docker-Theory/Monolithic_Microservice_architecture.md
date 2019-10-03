@@ -19,3 +19,19 @@ Since 1990's, the working and consumer environment has changed from
 -> Containerization (Docker etc.)
 -> Serverless Orchestartion (Kubernetes)
 ```
+
+# Benefits of Monolithic Architecture:
+
+**1. Simple to Develop:**
+* no or negligible modularity
+* configure dependencies once
+* one single programming languages (all on same page)
+
+**2. Simple to Test:**
+* Same language
+* Test all at once (only blackbox without unit testing and return to developer for white box testing)
+
+**3. Simple to Scale** (only Software not hardware)
+* Increase resource
+
+**4. Simple to Deploy**
