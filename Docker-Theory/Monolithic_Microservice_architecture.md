@@ -93,4 +93,9 @@ Monolithic architecture is still used in Mainframe and Banking sectors because t
 
 **6. No boundation on programming languages:** The working is important, background programming language is irrelevant for microservices.
 
+# Microservices versus Monolithic architecture
+
+Monolithic is still applicable for Big Data and ML applications which are difficult to shift to Microsercive architecture because they change very fast yet need huge downtime for the actual shift and also has huge risk implications.
+
+
 
