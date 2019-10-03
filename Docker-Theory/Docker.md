@@ -15,5 +15,22 @@ Problem it solves:
 * Distributed Development with mirroring
 * Lightweight: Does not need its own OS.
 
+# Docker Logo
+
+![Docker Logo](Docker.jpg)
+
+Docker logo signifies:
+
+**1. Core Docker principles**
+* Expedition
+* Automation
+* Encapsulation
+* Automation
+
+**2. Docker Motto**
+* Build
+* Ship
+* Run
+
 
 
