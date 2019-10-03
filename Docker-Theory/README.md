@@ -2,7 +2,7 @@
 
 [x] [1. Shifting from Monolithic to Microservice based architecture](Monolithic_Microservice_architecture.md)
 
-[] 2. Traditional Software Workflow (with and without Docker)
+[x] [2. Traditional Software Workflow (with and without Docker)](Docker.md)
 
 [] 3. What is Docker?
 
