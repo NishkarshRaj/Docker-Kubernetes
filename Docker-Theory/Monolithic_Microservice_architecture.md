@@ -64,3 +64,17 @@ Monolithic architecture is still used in Mainframe and Banking sectors because t
 -> Fast access to resources -> No time to buy and set up H/W
 -> Reliable -> Negligible downtime due to mirroring
 ```
+
+# Microservices Architecture
+
+* Loose coupling: Highly cohesive yet independent modules
+* Microservice: Independend and standalone module performing unique tasks.
+* Different DB instance for all modules -> Logging -> only merging with master DB common for all when needed
+* Different programming languages can be used for different modules only interface must be unique and problem solving must be done.
+* Distributed Development and use of new technologies especially Cloud Computing and Virtualization.
+* High scalability (both for H/W and S/W): Replication and time sharing
+* Faster rate of deployment as Agile is followed: Small changes yet incremental
+* All modules communicate using IPC (Inter process Communication) using API (generally REST API) gateways.
+* Version Control is followed: No downtime, the production environment just needs to be shifted from one place to another using load balancers.
+
+
