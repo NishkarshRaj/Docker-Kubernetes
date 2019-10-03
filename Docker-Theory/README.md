@@ -6,7 +6,7 @@
 
 [x] [3. What is Docker?](What_is_Docker.md)
 
-[x] 4. [History of Docker](History_of_Docker.md)
+[x] [4. History of Docker](History_of_Docker.md)
 
 [x] [5. Why Docker?](Docker.md)
 
