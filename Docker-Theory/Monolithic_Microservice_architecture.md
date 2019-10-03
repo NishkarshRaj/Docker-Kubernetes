@@ -35,3 +35,22 @@ Since 1990's, the working and consumer environment has changed from
 * Increase resource
 
 **4. Simple to Deploy**
+
+# Disadvantages of Monolithic Architecture:
+
+**1. Difficult to maintain:** If one module is changed, then all modules have to be changed (Regression testing)
+
+**2. Fault Intolerant:** If the server fails, all services stop.
+
+**3. Highly coupled code:** Code is highly coupled and thus one change affects large number of modules.
+Also, high coupling means code base in integrated and thus large LOC are present which makes it less readable and understandable.
+
+**4. Difficult to patch:** Highly static system; changes are difficult to be incorporated.
+
+**5. Huge downtime for changes:** Change in one module needs entire server and all other modules to be stopped leading to huge downtime.
+
+**6. Low adaptability to new tools and technologies:** One biggest case of losing huge market share due to poor adaptability is of Nokia in mobile market.
+
+```
+Monolithic architecture is still used in Mainframe and Banking sectors because the data is very valuable, voluminous and dynamic and shift of architecture would need huge downtime and would involve huge risks.
+```
