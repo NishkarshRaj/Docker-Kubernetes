@@ -77,4 +77,20 @@ Monolithic architecture is still used in Mainframe and Banking sectors because t
 * All modules communicate using IPC (Inter process Communication) using API (generally REST API) gateways.
 * Version Control is followed: No downtime, the production environment just needs to be shifted from one place to another using load balancers.
 
+# Advantages of Microservice architecture:
+
+**1. Scalability:**
+* Easy to Scale both H/W and S/W
+* Partial Scalability: Scale only those modules that need it.
+
+**2. Adapting to latest technologies** Independence leads to flexibility
+
+**3. Negligible Downtime:** If the server fails, all components do not fail as they may be hosted remotely on different servers and also have mirror images.
+
+**4. Agile Development:** Working in parallel on different modules and different phases rather than working sequentially.
+
+**5. Use of standard API for communication**
+
+**6. No boundation on programming languages:** The working is important, background programming language is irrelevant for microservices.
+
 
