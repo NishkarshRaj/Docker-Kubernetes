@@ -6,9 +6,9 @@
 
 [x] [3. What is Docker?](What_is_Docker.md)
 
-[x] 4. [History of Docker](Docker.md)
+[x] 4. [History of Docker](History_of_Docker.md)
 
-[] 5. Why Docker?
+[x] [5. Why Docker?](Docker.md)
 
 [] 6. Docker versus Linux containers
 
