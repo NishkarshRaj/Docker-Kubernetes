@@ -54,3 +54,13 @@ Also, high coupling means code base in integrated and thus large LOC are present
 ```
 Monolithic architecture is still used in Mainframe and Banking sectors because the data is very valuable, voluminous and dynamic and shift of architecture would need huge downtime and would involve huge risks.
 ```
+
+# Basics of Cloud Computing
+
+```
+-> On Demand services
+-> Remote resources
+-> Virtualization
+-> Fast access to resources -> No time to buy and set up H/W
+-> Reliable -> Negligible downtime due to mirroring
+```
