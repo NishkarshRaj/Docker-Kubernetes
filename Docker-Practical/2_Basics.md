@@ -51,3 +51,25 @@ $ docker image ls
 ```
 
 ![img](img/2_image.png)
+
+# Inspecting a Docker Image
+
+* See the Image ID using:
+
+```
+$ docker images
+```
+
+* Inspect the image using
+
+```
+$ docker inspect {first three letters of image ID or entire Image ID}
+```
+
+![Inspect1](img/2_inspect.png)
+
+We can see **Image Layering** with following screenshot of the Inspected image.
+
+![Inspect2](img/2_inspect1.png)
+
+
