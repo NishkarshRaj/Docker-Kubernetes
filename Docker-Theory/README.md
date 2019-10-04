@@ -10,6 +10,6 @@
 
 [x] [5. Why Docker?](Docker.md)
 
-[x] 6. Docker Basics
+[x] [6. Docker Basics](DockerVocabulary.md)
 
 [x] [7. Docker versus virtual machines](Container_VM.md)
