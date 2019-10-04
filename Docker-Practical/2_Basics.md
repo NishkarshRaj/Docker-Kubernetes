@@ -18,7 +18,7 @@ or
 $ docker container ls
 ```
 
-![ps](2_ps.png)
+![ps](img/2_ps.png)
 
 Shows the active containers with following
 * Repository
@@ -50,4 +50,4 @@ or
 $ docker image ls
 ```
 
-![img](2_image.png)
+![img](img/2_image.png)
