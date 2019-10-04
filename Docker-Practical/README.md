@@ -11,3 +11,5 @@ $ docker version
 ```
 $ docker -v
 ```
+
+**Note:** To enter full screen on Play with Docker sandbox, use left ```alt+enter```
