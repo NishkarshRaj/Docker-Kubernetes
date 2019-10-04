@@ -17,7 +17,7 @@ Problem it solves:
 
 # Docker Logo
 
-![Docker Logo](Docker.jpg)
+![Docker Logo](img/Docker.jpg)
 
 Docker logo signifies:
 
