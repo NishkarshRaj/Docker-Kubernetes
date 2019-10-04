@@ -67,4 +67,4 @@ $ docker attach {Image ID or first three letters}
 
 **Press Ctrl+P+Q**
 
-![img](img/4_end.pnh)
+![img](img/4_end.png)
