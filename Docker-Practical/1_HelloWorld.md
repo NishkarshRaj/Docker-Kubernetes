@@ -4,7 +4,7 @@
 $ docker run hello-world
 ```
 
-![HelloWorld](HelloWorld.png)
+![HelloWorld](img/1HelloWorld.png)
 
 * It first searches for **hello-world** Docker image in the local machine but if it does not exists, it pings the Docker Hub registry and pulls the best matched repository with the same name.
 
