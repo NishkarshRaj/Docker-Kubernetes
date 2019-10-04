@@ -25,3 +25,18 @@ $ docker images
 
 ![img](img/3_alpine.png)
 
+# Seeing the entire Image Id of the Docker Images
+
+```
+$ docker images --no-trunc
+```
+
+![img](img/3_notrunc.png)
+
+# Searching for Docker Images with a pattern
+
+```
+$ docker images --filter=reference='pattern'
+```
+
+![img](img/3_filter.png)
