@@ -34,3 +34,21 @@ Kubernetes is one of the first and also the most used orchestration tool for con
 **7. Auto scaling:** Auto-scaling is a replication factor which maintains a certain number of replicas of container in the cluster.
 If one or more cluster fails or goes down, another replica is created to maintain the replica factor.
 
+## Kubernetes Architecture
+
+![img](img/K8_arch.png)
+
+Master-Slave Architecture:
+
+**Master (Orchestration System)**
+* Kube-API Server
+* Kube-Controller Manager
+* Cloud-Controller Manager
+* ETCD Data Store
+* Kube Scheduler
+
+**Slave (Node)**
+* Pod
+* Containers
+* Kubelet
+* Kube proxies
