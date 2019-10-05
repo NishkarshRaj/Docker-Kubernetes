@@ -17,3 +17,20 @@ Kubernetes is one of the first and also the most used orchestration tool for con
 
 ## Features of Orchestration System
 
+**1. Scheduling:**
+* Resources per need dynamically -> optimize resource usage.
+* By label -> priortize
+
+**2. Replication:** Replication in distributed storage is needed for backup so that uptime is maximized.
+
+**3. Handling failures:** Create alerts and feedback mechanisms for failure, downtime or resource usage above threshold.
+
+**4. Discovery:** Since containers work in isolation and do not know about existence of other containers, orchestration tool must find the containers for communication.
+
+**5. Inspection:** Monitor health and status of the containers.
+
+**6. Load balancing:** Balance the load by equal distribution on all containers and scaling according to needs.
+
+**7. Auto scaling:** Auto-scaling is a replication factor which maintains a certain number of replicas of container in the cluster.
+If one or more cluster fails or goes down, another replica is created to maintain the replica factor.
+
