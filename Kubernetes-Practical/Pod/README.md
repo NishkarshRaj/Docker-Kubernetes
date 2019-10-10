@@ -19,80 +19,94 @@ If HyperV wasn't active before, go ahead and restart your computer.
 
 Start up minikube with the following command.  
 
-```cmd 
+```cmd
 minikube start --vm-driver=hyperv
 ```
-and if you want to set hyperv as the default
-```cmd 
+
+And if you want to set hyperv as the default.
+
+```cmd
 minikube config set vm-driver hyperv
 ```
 
-## Describing the deployment
+## Describing the Pod
 
-Next, we'll need to get our deployment file setup. This is described using YAML.
+Next, we'll need to get our pod file setup. This is described using YAML.
 
 ``` yaml
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: v1
+kind: Pod
 metadata:
-  name: nginx-deployment
+  name: nishkarsh
 spec:
-  selector:
-    matchLabels:
-      app: nginx
-  replicas: 2
-  template:
-    metadata:
-      labels:
-        app: nginx
-    spec:
-      containers:
-      - name: nginx
-        image: nginx:1.7.9
-        ports:
-        - containerPort: 80
+  containers: 
+  - name: nishkarsh
+    image: nginx
 ```
 
 With the yaml file setup, we can use kubectl to create the deployment.
 
 ```cmd
-kubectl apply -f manifest.yml
+kubectl create -f nginx.yaml
 ```
 
 You should get an output similar to this:
 
 ```cmd
-C:\Users\Dublin\Documents\GitHub\Docker-Kubernetes\Kubernetes-Practical\Pod> kubectl apply -f .\nginx.yaml
-deployment.apps/nginx-deployment configured
+PS C:\Users\Dublin\Documents\GitHub\Docker-Kubernetes\Kubernetes-Practical\Pod> kubectl create -f nginx.yaml
+pod/nishkarsh created
 ```
 
-## Checking Pod Deployments
+## Checking the Pod
 
-To check the pod deployments, run the following kubectl command:
+To check the pod, run the following kubectl command:
 
 ```cmd
 kubectl get pods
 ```
 
-And you should get an output similar to below:
+And you should get an output similar to the below:
 
 ```cmd
+PS C:\Users\Dublin\Documents\GitHub\Docker-Kubernetes\Kubernetes-Practical\Pod> kubectl get pods
 NAME                                READY   STATUS    RESTARTS   AGE
-nginx-deployment-54f57cf6bf-8hhps   1/1     Running   0          105s
-nginx-deployment-54f57cf6bf-t4nb7   1/1     Running   0          103s
+nishkarsh                           1/1     Running   0          25s
 ```
 
 To check a specific pods status, we can run a describe for a particular pod.
 
 ```cmd
-kubectl describe pod nginx-deployment nginx-deployment-54f57cf6bf-8hhps
+kubectl describe pod nishkarsh
 ```
 
-The syntax for the kubectl command is ``` kubectl describe pod  DEPLOYMENT-NAME POD-NAME ```
+The syntax for the kubectl command is ``` kubectl describe pod POD-NAME ```
 
 And get a more detailed output of its metadata and associated events.
 
 ```cmd
+PS C:\Users\Dublin\Documents\GitHub\Docker-Kubernetes\Kubernetes-Practical\Pod> kubectl describe pod nishkarsh
+Name:               nishkarsh
+Namespace:          default
+Priority:           0
+PriorityClassName:  <none>
+Node:               minikube/172.17.50.52
+Start Time:         Wed, 09 Oct 2019 21:50:58 -0500
+Labels:             <none>
+Annotations:        <none>
+Status:             Running
+IP:                 172.18.0.10
+Containers:
+  nishkarsh:
+    Container ID:   docker://55597268f41d9a24a0d2803dd27d10dfcb746955111d0418f6cc5b0341647281
+    Image:          nginx
+    Image ID:       docker-pullable://nginx@sha256:aeded0f2a861747f43a01cf1018cf9efe2bdd02afd57d2b11fcc7fcadc16ccd1
+    Port:           <none>
+    Host Port:      <none>
+    State:          Running
+      Started:      Wed, 09 Oct 2019 21:51:00 -0500
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
     Mounts:
       /var/run/secrets/kubernetes.io/serviceaccount from default-token-5bwbx (ro)
 Conditions:
@@ -113,44 +127,24 @@ Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
 Events:
   Type    Reason     Age        From               Message
   ----    ------     ----       ----               -------
-  Normal  Scheduled  <unknown>  default-scheduler  Successfully assigned default/nginx-deployment-54f57cf6bf-8hhps to minikube
-  Normal  Pulled     4m2s       kubelet, minikube  Container image "nginx:1.7.9" already present on machine
-  Normal  Created    4m2s       kubelet, minikube  Created container nginx
-  Normal  Started    4m2s       kubelet, minikube  Started container nginx
-Error from server (NotFound): pods "nginx-deployment" not found
+  Normal  Scheduled  <unknown>  default-scheduler  Successfully assigned default/nishkarsh to minikube
+  Normal  Pulling    67s        kubelet, minikube  Pulling image "nginx"
+  Normal  Pulled     66s        kubelet, minikube  Successfully pulled image "nginx"
+  Normal  Created    66s        kubelet, minikube  Created container nishkarsh
+  Normal  Started    66s        kubelet, minikube  Started container nishkarsh
 ```
 
+## Deleting the Pod
 
-## Editing Deployment
-
-To edit the deployment, edit the manifest.
-``` yaml
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: nginx-deployment
-spec:
-  selector:
-    matchLabels:
-      app: nginx
-  replicas: 4 # Upped the replica count to 4
-  template:
-    metadata:
-      labels:
-        app: nginx
-    spec:
-      containers:
-      - name: nginx
-        image: nginx:1.8 # Bumped the nginx version
-        ports:
-        - containerPort: 80
-```
-
-And run kubectl apply again.
+To delete the pod, run the following command:
 
 ```cmd
-kubectl apply -f manifest.yml
+kubectl delete pods nishkarsh
 ```
 
+And you'll get the following message:
 
-## Scaling Deployment
+```cmd
+PS C:\Users\Dublin\Documents\GitHub\Docker-Kubernetes\Kubernetes-Practical\Pod> kubectl delete pods nishkarsh
+pod "nishkarsh" deleted
+```
