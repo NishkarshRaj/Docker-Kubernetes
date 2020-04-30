@@ -37,4 +37,13 @@ We have to configure all of them in different environments to run it everywhere.
 * Docker Engine - Client + Server
 * Docker Client and Server interact via commands or Rest API.
 
+## Advantages of Docker
+* Build Once - Run everywhere
+* Portable - Supported by AWS, GCP etc
+* Easy to Share - central hub repository
+* Version Controlling
+* Isolation
+* Standard Packaging 
+* Improved productivity
+
 
