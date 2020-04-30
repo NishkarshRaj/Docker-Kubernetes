@@ -352,6 +352,42 @@ $ docker run -p 8080:8080 -p 50000:50000 -v [local storage]:[destination storage
 
 **BCD!! Volume Mapping - Create Volume via Docker CLI - "/var/lib/docker/volumes" but we can directly link a local folder as well.**
 
+## Dockerfiles
+
+Text file with instruction to **build** the Docker Images
+
+```
+$ vim Dockerfile
+```
+
+```Dockerfile
+# Comments
+FROM [image name]/[SCRATCH] # Scratch is an empty image
+MAINTAINER [User name] <[Email]> # Optional
+RUN [command] # Execute on Build
+CMD ["echo","Hello World"]# Execute on container launch
+```
+
+* Build the Docker Image
+```
+$ docker build [path]
+```
+
+* Build Image with tag
+```
+$ docker build -t [image name] [path]
+```
+
+* Run the image
+```
+$ docker run [image ID]
+```
+
+### References
+
+https://github.com/wsargent/docker-cheat-sheet#dockerfile
+
+https://docs.docker.com/engine/reference/builder/#environment-replacement
 
 
 
