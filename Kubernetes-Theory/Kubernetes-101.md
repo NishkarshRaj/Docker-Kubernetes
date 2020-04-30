@@ -95,7 +95,73 @@ Services are used for Network and communication.
 * If node dies - replace and reschedule containers on other nodes
 * If container does not respond to health check - Kill the container and use alternate container
 
+### 5. Automated Rollouts and Rollbacks
 
+**Rollout:** Deploy changes to the application or its configuration
+
+**Rollback** Revert the changes and restore to previous stable state.
+
+* Kubernetes does automated rollout and rollback, that too by guarenteeing **ZERO DOWNTIME**
+
+### 6. Secret and Configuration Management
+
+**Special Kubernetes Objects: Difference between them - Isolation from containers**
+1. Secrets
+2. Config Maps
+
+1. Secrets
+* Sensitive data
+* Managed and created outside pods but in same node
+* Makes sensitive data portable and easy to manage
+
+2. ConfigMaps
+* configuration
+* Managed and created outside pods but in same node
+* Makes configurations portable and easy to manage
+
+![Secrets](img/Secrets.png)
+
+**Notes:**
+
+* Special Kubernetes objects are stored in ETCD, a key-value datastore.
+* Max size limit for Secrets file is 1 MB
+
+### 7. Batch Execution
+
+**Batch jobs:** Requires an executable/process to run to completion.
+* Kubernetes uses **Run to completion** jobs for batch processing
+* One job creates one or more pods.
+* During job execution, if any container or pod fails, **Job Controller** will reschedule the container, pod or node.
+* Can run multiple pods in parallel
+* Scaling pods up/down.
+* After the completion of job, pods will move from running to shut down state.
+
+### 8. Horizontal Scaling
+* Scale up or down.
+* scaling can be done by:
+
+1. Command line
+2. Automatically based on CPU storage
+3. Kubernetes UI (Dashboard)
+
+* Tools involved:
+1. Replication Controller
+2. Manifest file
+3. Horizontal Pod Autoscaler
+
+**Replication Controller (RC or RCS)** Creates pods/containers and their specified amount of replicas.
+It ensures that the specified amount of replicas always exists and if some container/pods go down, they are automatically replaced.
+
+**Manifest file:** It specifies the number of replicas to be maintained by the Replication Controller
+
+**Horizontal Pod Autoscaler:** automatically scales the number of pods to be maintained by observing the CPU Utilization with custom metrics.
+* Monitors every **15 seconds** (default time; can be modified)
+
+**Note: RC is used for maintaining replicas and two other components tell the amount of replications**
+* Manifest file is static file with fixed number of replicas
+* Horizontal Pod Autoscaler gives replication factor dynamically based on resource availability.
+
+![Scaling](img/scale.png)
 
 ## Architecture of Kubernetes
 
