@@ -255,7 +255,7 @@ $ docker rmi [-f] [image name]
 ## Docker Containers
 * Running instance of Docker Images
 
-![img](img/arch.png)
+![image](img/arch.png)
 
 
 ### How to create containers
