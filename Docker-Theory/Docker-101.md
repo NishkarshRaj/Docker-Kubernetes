@@ -252,3 +252,23 @@ $ docker inspect [container name]
 ```
 $ docker rmi [-f] [image name]
 ```
+
+## Docker Containers
+* Running instance of Docker Images
+
+![img](img/arch.png)
+
+
+### How to create containers
+```
+$ docker run [image name] # Inbuilt Pull feature
+```
+
+```
+$ docker ps # Running containers
+```
+
+```
+$ docker ps -a # All containers
+```
+
