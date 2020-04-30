@@ -15,4 +15,26 @@ We have to configure all of them in different environments to run it everywhere.
 
 * Containers are standard packaging - organization - transport - portability.
 
-![Generic placeholder for image](img/.png)
+## Docker Architecture
+
+### General Workflow of Docker
+
+* Dockerfile - Docker Image - Docker Container - DockerHub
+* Pull Image in different devices via the repository and run the container anywhere.
+
+### Containerization vs Virtualization
+
+* Hypervisor vs Container Runtime
+* Guest OS vs Parent Kernel sharing
+* Resource allocation vs On demand resource allocation
+
+![img](img/containervm.png)
+
+### Docker Architecture - Client Server Architecture
+
+* Client - Command Line Interface
+* Server - Docker Daemon - containers run on server => Server = Docker Daemon + Containers
+* Docker Engine - Client + Server
+* Docker Client and Server interact via commands or Rest API.
+
+
