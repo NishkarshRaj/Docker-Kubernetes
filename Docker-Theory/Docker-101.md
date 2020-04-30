@@ -389,4 +389,75 @@ https://github.com/wsargent/docker-cheat-sheet#dockerfile
 https://docs.docker.com/engine/reference/builder/#environment-replacement
 
 
+## Docker Compose - Microservice Architecture
 
+* tool for defining & running multi-container docker applications
+* use yaml files to configure application services (docker-compose.yml)
+* can start all services with a single command : `docker compose up`
+* can stop all services with a single command : `docker compose down`
+* can scale up and down selected services/containers of the compose when required
+
+### Install Docker Compose 
+
+* Already installed on Mac and Windows
+
+```
+$ docker compose -v # or --version
+```
+```
+$ docker compose version
+```
+
+* **Way 1) Download via GitHub**
+```
+$ curl -L https://github.com/docker/compose/releases/download/1.25.4/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+$ chmod +x /usr/local/bin/docker-compose
+```
+
+* **Way 2) Download using pip**
+```
+$ pip install -U docker-compose
+```
+
+## Create Docker compose
+```
+$ vi docker-compose.yaml
+```
+
+* 2 space identation
+
+```
+version: [version number] # Note docker compose file version must be compatible with Docker Engine version
+services:
+  [container name]: 
+	  [image]: [image name]
+  [container name]: 
+	  [image]: [image name]
+```
+
+* Check validity of yaml file - correct syntax or not
+```
+$ docker-compose config
+```
+
+* Launch all containers
+```
+$ docker-compose up [-d]
+```
+
+* Check containers
+```
+$ docker-compose ps
+```
+
+* Down the service
+```
+$ docker-compose down
+```
+
+* Scale specific containers
+```
+$ docker-compose --scale [c1]=n [c2]=m
+```
+
+## Docker Volumes
