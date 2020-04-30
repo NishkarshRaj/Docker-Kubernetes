@@ -318,6 +318,39 @@ $ docker rm [container name or ID]
 $ docker history [image name]
 ```
 
+## How to run Jenkins on Docker Containers
+* How to Start Jenkins on Docker
+* How to set Jenkins home on parent OS
+
+* Pull the Jenkins Image
+```
+$ docker pull jenkins
+```
+
+* Run the Docker container to launch Jenkins on parent OS
+```
+$ docker run -p 8080:8080 -p 50000:50000 jenkins # [Export Host port]:[Server port]
+```
+* 8080: Web Brower hosting
+* 50000: Jenkins API Communication linking
+
+* Create a persistent storage for Jenkins - Docker Volume
+```
+$ docker run -p 8080:8080 -p 50000:50000 -v [local storage]:[destination storage] jenkins
+```
+
+* Unlock Jenkins home on parent OS web Interface
+* Set a password - Settings - Users - Configure - Change Password
+* Create a simple job to execute Shell command - `$ls`
+* New terminal since Jenkins running via Docker on other terminal
+* Stop the Docker container of Jenkins
+* Check if the job present on the local storage
+* Delete the container permanently
+* Create another container with same Jenkins home directory of local parent!!
+
+**BCD!! Jenkins jobs and different configurations are kept intact when we use the same local storage for linking**
+
+**BCD!! Volume Mapping - Create Volume via Docker CLI - "/var/lib/docker/volumes" but we can directly link a local folder as well.**
 
 
 
