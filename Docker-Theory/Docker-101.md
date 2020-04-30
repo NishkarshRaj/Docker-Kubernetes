@@ -151,7 +151,6 @@ $ docker ps # Running containers
 ```
 $ docker ps -a # All containers
 ```
-```
 
 * Run - Check image locally, if not present, pull from Hub and launch a container.
 ```
