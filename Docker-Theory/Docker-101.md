@@ -190,3 +190,65 @@ $ docker system df
 $ docker system prune # Outputs total resource regained especially in terms of memory
 ```
 
+## Docker Images
+
+### What are Images
+
+* Images are template to create docker containers
+* Containers are runtime artifacts
+
+
+```
+$ docker images # list images
+```
+```
+$ docker images --help # Check the basic command usage
+```
+
+### How to Pull an image
+```
+$ docker pull [image name] # Pulls latest image by default
+```
+
+```
+$ docker pull [image name]:[tags] # Downloads specific tags
+```
+
+```
+$ docker images -q # Shows all numeric IDs of local images # --quiet
+```
+
+```
+$ docker images -f "dangling=false" # Filter -- filter
+```
+
+```
+$ docker image --all # All images
+```
+
+### How to run a container from the image
+
+```
+$ docker run [image name]
+```
+
+```
+$ docker run -it --name [container name] [image] [bash]
+```
+
+### Basic Commands
+
+* Inspect Images - Shows layers - Images are STACK of layers.
+```
+$ docker inspect [image name]
+```
+
+* Inspect Containers
+```
+$ docker inspect [container name]
+```
+
+* Stopped related containers needed to delete image - use force
+```
+$ docker rmi [-f] [image name]
+```
