@@ -86,3 +86,107 @@ $ apt remove docker
 https://get.docker.com/
 https://docs.docker.com/engine/install/binaries/
 
+## Basic Docker Commands
+
+### Basic commands
+
+* Version, client, golang version - detailed
+
+```
+$ docker version
+```
+
+* One line Docker version information
+
+```
+$ docker --version 
+$ docker -v 
+```
+
+* Detailed Docker information along with current state on parent OS
+
+```
+$ docker info
+```
+
+* Help command to know about other commands
+```
+$ docker --help
+```
+```
+$ docker [command] --help
+```
+
+* Login to DockerHub
+
+```
+$ docker login
+```
+
+### Images commands
+
+* Docker Pull
+
+```
+$ docker pull [image name] # Fetches from repository
+```
+```
+$ docker images -q # All IDs of image
+```
+```
+$ docker images -a # All information of cached images
+```
+
+* Delete images
+```
+$ docker rmi [-f] [space separated image names or ID]
+```
+
+### Containers commands
+
+* PS - list containers
+```
+$ docker ps # Running containers
+```
+```
+$ docker ps -a # All containers
+```
+```
+
+* Run - Check image locally, if not present, pull from Hub and launch a container.
+```
+$ docker run [image name]
+```
+```
+$ docker run -it [image] # Interactive mode
+```
+
+* Docker start
+```
+$ docker start [image name] # Not running but fully provisioned
+```
+
+* Docker Stop
+```
+$ docker stop [image name]
+```
+
+### System commands
+
+* Stats command - Resource utilization
+```
+$ docker stats
+```
+
+* Disk utilization
+
+```
+$ docker system df 
+```
+
+* Prune - delete all unused data but not the dangling images
+* Prune --all (dangling images - not having any running container)
+```
+$ docker system prune # Outputs total resource regained especially in terms of memory
+```
+
