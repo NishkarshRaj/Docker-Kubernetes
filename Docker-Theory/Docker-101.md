@@ -272,3 +272,53 @@ $ docker ps # Running containers
 $ docker ps -a # All containers
 ```
 
+```
+$ docker run --name [name of container] -it [image name]
+```
+
+* Start containers
+* Stop containers
+* Pause containers - lock container - takes on input from user and stops every tasks!
+```
+$ docker pause [container name] # From another terminal
+```
+
+* Unpause containers
+```
+$ docker unpause [container name]
+```
+
+* Top command - PID, commands, name etc.
+```
+$ docker top [container name]
+```
+
+* Statistics
+```
+$ docker stats [container name]
+```
+
+* Attach to running container - attach to start or running state only
+```
+$ docker attach [container name or ID]
+```
+
+* Kill a container - Running containers only
+```
+$ docker kill [container name or ID]
+```
+
+* Remove container
+```
+$ docker rm [container name or ID]
+```
+
+* History of containers linked to local image
+```
+$ docker history [image name]
+```
+
+
+
+
+
