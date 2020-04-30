@@ -46,4 +46,43 @@ We have to configure all of them in different environments to run it everywhere.
 * Standard Packaging 
 * Improved productivity
 
+## Docker Installation on Linux 64 bits
+
+* Connect to Linux
+
+* Install Docker
+
+```
+$ sudo apt-get -y update
+$ sudo apt-get -y install docker
+$ docker --version
+$ docker info
+```
+* Start Docker
+
+```
+$ sudo service docker start
+$ docker info
+```
+
+* Add User to Docker
+
+```
+$ sudo usermod -a -G docker [username]
+```
+
+* Stop Docker
+```
+$ sudo service docker stop
+```
+
+* Uninstall Docker
+```
+$ apt remove docker
+```
+
+### Resources
+
+https://get.docker.com/
+https://docs.docker.com/engine/install/binaries/
 
