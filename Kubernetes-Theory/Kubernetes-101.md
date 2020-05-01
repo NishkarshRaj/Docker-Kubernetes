@@ -185,3 +185,7 @@ It ensures that the specified amount of replicas always exists and if some conta
 ![Pods and Nodes](img/Arch1.png)
 
 **Note:** In Latest Kubernetes version (v1.16):
+* Maximum Nodes: 5000
+* Maximum Pods: 1,50,000
+* Maximum Containers: 3,00,000
+* Maximum Pods per node: 100
