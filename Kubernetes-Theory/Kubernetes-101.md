@@ -78,7 +78,7 @@ Services are used for Network and communication.
 
 ![Load Balancing](img/lb.png)
 
-### 3. Storage Orchestration**
+### 3. Storage Orchestration
 
 * Volume definition inside pods.
 * One volume for one pod
@@ -247,10 +247,54 @@ ii) Dashboard Kubernetes UI
 
 * We can disable the controller loops by setting **--cloud-provider** flag to external.
 
-4. ETCD: Key-value database
+**4. ETCD: Key-value database**
+* Open Source
+* Distributed Database from CoreOS
+* Consistent
+* Highly available
+* Key-value Datastore
+* Single source for secrets and configurations for Kubernetes Cluster
+* Only the API Server can directly access the ETCD Store.
+* ETCD can be stored on Master but it can be configured externally.
+
+![Master Node](img/Master1.png)
 
 #### 3 Components of Worker Node
 
+* Every worker node must have a container runtime, like Docker.
+
+* Components of Worker Node
+
+**1) Kubelet:** Agent on each worker node
+* Interaction with Master node via API Server.
+* Makes sure that pods are running
+* **PodSpecs** are used for reference.
+* Local Health Check - first tries to restart pod on same node or else creates another node.
+* **Kubelet only manages containers made by Kubernetes and not the other ones in the system** 
+
+**2) Kube-Proxy**
+* Networking Agent - Core Networking component
+* Interacts with the network 
+* Exposes service to outside world
+* Daemon process
+* Interacts with master via API Server for updates to services and endpoints.
+
+**3) Container Runtime:** Pods and Containers
+- Docker, ContainerD, Cri-o, RKTlet etc.
+
+* Kubernetes does not have own capability to create containers
+
 #### Add-Ons
 
+**1. Dashboard:** Web based user interace
+
+**2. Monitoring:** Collects cluster-level container metrics and saves them to central data store.
+
+**3. Logging:** stores container logs in a central log store for analysis
+
+**4. DNS:** Each service is assigned a unique DNS
+
 #### How Master and Worker Interact
+
+![Full Architecture](img/full.png)
+
