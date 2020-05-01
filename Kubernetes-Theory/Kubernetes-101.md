@@ -189,3 +189,68 @@ It ensures that the specified amount of replicas always exists and if some conta
 * Maximum Pods: 1,50,000
 * Maximum Containers: 3,00,000
 * Maximum Pods per node: 100
+
+### More about Kubernetes Architecture
+
+#### 4 Components of Master Node
+
+* Responsible for managing the cluster
+* Monitors the pods and nodes
+* when the node fails, moves the workload of the failed node to another workload.
+
+**Components of Master Node**
+
+![Master](img/Master.png)
+
+**1. API Server:** for all communications (JSON over HTTP API)
+* Front-end  for Kubernetes Control Panel
+* User can access API Server using
+i) Command line: **KubeCTL** - KuberCTL is written in Golang
+ii) Dashboard Kubernetes UI
+ 
+**2. Scheduler** - schedules pods on nodes
+* Schedules pods across multiple nodes
+* Scheduler obtains information about pods from ETCD via the API server and resource usage data from each worker.
+
+**3. Controller Manager** - runs controller
+* Different controllers
+
+**3.1) Kube-controller Manager**
+* Tells scheduler to act when node becomes unavailable
+* Ensure Pods count is same as replication factor.
+* Create end points, service accounts and API Access Tokens
+* Checks health of the container
+* Controllers run watch-loops continuously to compare the cluster's desired state (from configuration) to its current state (obtained from etcd data store via the API Server)
+
+* Different components of Kube-control manager
+
+3.1.1) Node Controller - Monitor nodes - checks health
+
+3.1.2) Replication Controller - checks replication factor
+
+3.1.3) Endpoints Controller - maintains services and configurations
+
+3.1.4) Service Account and Token Controllers - maintain accounts and namespaces
+
+**Note:** All the controllers are separate processes but to reduce complexity, they are compiled into a single binary and run in single process.
+
+**3.2) Cloud-controller Manager**
+* Node becomes unavailable on cloud
+
+3.2.1) Node Controller - checks health and delete inresponsive nodes
+
+3.2.2) Route Controller - setup routes in cloud infrastructure
+
+3.2.3) Service Controller - creating, updating and deleting cloud provider load balancers.
+
+3.2.4) Volume Controller - creating, attaching, and mounting volumes.
+
+* We can disable the controller loops by setting **--cloud-provider** flag to external.
+
+4. ETCD: Key-value database
+
+#### 3 Components of Worker Node
+
+#### Add-Ons
+
+#### How Master and Worker Interact
