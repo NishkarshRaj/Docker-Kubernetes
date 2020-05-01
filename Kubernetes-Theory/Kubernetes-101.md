@@ -165,4 +165,23 @@ It ensures that the specified amount of replicas always exists and if some conta
 
 ## Architecture of Kubernetes
 
-## Hands On
+![Basic Architecture](img/Arch2.png)
+
+**Analogy:** Master-Worker architecture
+* Master - Manager node
+* Slaves - Worker nodes
+* **Cluster:** Master nodes + worker nodes (formerly also refered as Minions)
+* When we deploy Kubernetes, we get a cluster.
+* A cluster consists of machines called nodes.
+* A cluster has at least one worker node and at least one master node 
+* More than one masters can be there - failover and higher availability
+* More than one clusters can be there
+* One node contains multiple pods
+
+**Node:** Physical Machine/ Virtual Machine/ Cloud
+* Node consists of Pods
+* Pods consists of containers
+
+![Pods and Nodes](img/Arch1.png)
+
+**Note:** In Latest Kubernetes version (v1.16):
