@@ -1,0 +1,49 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: rbac-example-namespace
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: rbac-example-serviceaccount
+  namespace: rbac-example-namespace
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: rbac-example-role
+  namespace: rbac-example-namespace
+rules:
+  - apiGroups:
+      - ""
+    resources:
+      - pods
+    verbs:
+      - get
+      - watch
+      - list
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: rbac-example-rolebinding
+  namespace: rbac-example-namespace
+subjects:
+  - kind: ServiceAccount
+    name: rbac-example-serviceaccount
+    namespace: rbac-example-namespace
+roleRef:
+  kind: Role
+  name: rbac-example-role
+  apiGroup: rbac.authorization.k8s.io
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  namespace: rbac-example-namespace
+spec:
+  containers:
+    - name: nginx
+      image: nginx
