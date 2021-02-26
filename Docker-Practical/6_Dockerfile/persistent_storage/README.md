@@ -13,6 +13,7 @@ CMD cd /data && cat DATA
 The container's folder /data is persisted in a volume.
 The container terminates the volume lives on.
 
+## Access and print out the data from another container
 We then build a second container which will print out the data stored in the /data folder.
 ```
 docker build -t hellodocker .
