@@ -10,7 +10,7 @@ COPY . /data
 VOLUME /data
 CMD cd /data && cat DATA
 ```
-The container's folder /data is persisted in a Volume.
+The container's folder /data is persisted in a volume.
 The container terminates the volume lives on.
 
 We then build a second container which will print out the data stored in the /data folder.
