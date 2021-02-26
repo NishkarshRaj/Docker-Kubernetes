@@ -14,9 +14,11 @@ The container's folder /data is persisted in a Volume.
 The container terminates the volume lives on.
 
 We then build a second container which will print out the data stored in the /data folder.
-`docker build -t hellodocker .`
+```
+docker build -t hellodocker .
 
-`docker run --volumes-from initvolume hellodocker`
+docker run --volumes-from initvolume hellodocker
+```
 This uses the volume created by the initvolume-Container.
 ```
 FROM node
