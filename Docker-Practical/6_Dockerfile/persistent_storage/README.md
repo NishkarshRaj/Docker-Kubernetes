@@ -1,6 +1,6 @@
-# Use Volumes to persist data
+# Use volumes to persist data
 
-## Create a Volume an fill with data
+## Create a volume an fill with data
 We build the Container initvolume and populate it with data.
 `docker build -t initvolume ./initVolume`
 `docker run initvolume`
