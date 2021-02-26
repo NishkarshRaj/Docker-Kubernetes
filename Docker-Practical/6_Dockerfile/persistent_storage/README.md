@@ -1,9 +1,12 @@
 # Use volumes to persist data
 
 ## Create a volume an fill with data
-We build the Container initvolume and populate it with data.
-`docker build -t initvolume ./initVolume`
-`docker run initvolume`
+We build the container initvolume and populate it with data.
+```
+docker build -t initvolume ./initVolume
+docker run initvolume`
+```
+
 ```
 FROM alpine
 COPY . /data
