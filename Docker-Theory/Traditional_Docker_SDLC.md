@@ -18,4 +18,4 @@
 * If Build Fails -> Feedback to all developers
 5. Deployment server -> Stage, test and deploy to production.
 
-**Note:** Biggest advantage of using containers is that it guarentees working of application on any device/environment given that container engine is present on it.
+**Note:** Biggest advantage of using containers is that it guarantees working of application on any device/environment given that container engine is present on it.

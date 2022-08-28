@@ -16,6 +16,6 @@ It is Cross Platform:
 **1. For Humans:** Has applications for Developers, Tester etc.
 **2. Wrt Environment:** Works on all the platforms, clouds and even micro devices like Rpi that too with the same UI.
 
-**Note:** Docker guarentees the working of the application on any machine and environment given it works on one machine and all machine it is supposed to work on have Docker engine installed on them.
+**Note:** Docker guarantees the working of the application on any machine and environment given it works on one machine and all machine it is supposed to work on have Docker engine installed on them.
 
 

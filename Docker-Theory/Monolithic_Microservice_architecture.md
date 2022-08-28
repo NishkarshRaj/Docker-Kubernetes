@@ -17,7 +17,7 @@ Since 1990's, the working and consumer environment has changed from
 -> Virtual Computers
 -> Cloud Computing (Remote virtualization services on demand)
 -> Containerization (Docker etc.)
--> Serverless Orchestartion (Kubernetes)
+-> Serverless Orchestration (Kubernetes)
 ```
 
 # Benefits of Monolithic Architecture:
@@ -29,7 +29,7 @@ Since 1990's, the working and consumer environment has changed from
 
 **2. Simple to Test:**
 * Same language
-* Test all at once (only blackbox without unit testing and return to developer for white box testing)
+* Test all at once (only black box without unit testing and return to developer for white box testing)
 
 **3. Simple to Scale** (only Software not hardware)
 * Increase resource
@@ -68,7 +68,7 @@ Monolithic architecture is still used in Mainframe and Banking sectors because t
 # Microservices Architecture
 
 * Loose coupling: Highly cohesive yet independent modules
-* Microservice: Independend and standalone module performing unique tasks.
+* Microservice: Independent and standalone module performing unique tasks.
 * Different DB instance for all modules -> Logging -> only merging with master DB common for all when needed
 * Different programming languages can be used for different modules only interface must be unique and problem solving must be done.
 * Distributed Development and use of new technologies especially Cloud Computing and Virtualization.
@@ -91,11 +91,11 @@ Monolithic architecture is still used in Mainframe and Banking sectors because t
 
 **5. Use of standard API for communication**
 
-**6. No boundation on programming languages:** The working is important, background programming language is irrelevant for microservices.
+**6. No boundaries on programming languages:** The working is important, background programming language is irrelevant for microservices.
 
 # Microservices versus Monolithic architecture
 
-Monolithic is still applicable for Big Data and ML applications which are difficult to shift to Microsercive architecture because they change very fast yet need huge downtime for the actual shift and also has huge risk implications.
+Monolithic is still applicable for Big Data and ML applications which are difficult to shift to Microservice architecture because they change very fast yet need huge downtime for the actual shift and also has huge risk implications.
 
 
 

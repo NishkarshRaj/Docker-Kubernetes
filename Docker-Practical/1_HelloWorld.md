@@ -1,7 +1,7 @@
 # Run the Hello-World Docker image from DockerHub
 
 ```
-$ docker run hello-world
+docker run hello-world
 ```
 
 ![HelloWorld](img/1HelloWorld.png)
@@ -11,6 +11,5 @@ $ docker run hello-world
 ## Syntax: Run a docker container from docker image
 
 ```
-$ docker run {image name}
+docker run {image name}
 ```
-

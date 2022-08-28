@@ -1,7 +1,7 @@
 # Pull an Ubuntu Linux image and run it in Interactive mode
 
 ```
-$ docker run -it ubuntu
+docker run -it ubuntu
 ```
 
 ![ubuntu](img/2_ubuntu.png)
@@ -11,16 +11,19 @@ To exit the container, use the **exit** keyword.
 # Seeing the active (Up) docker containers
 
 ```
-$ docker ps
+docker ps
 ```
+
 or
+
 ```
-$ docker container ls
+docker container ls
 ```
 
 ![ps](img/2_ps.png)
 
 Shows the active containers with following
+
 * Repository
 * Tag
 * Image ID
@@ -32,7 +35,7 @@ But is the container cached in memory for faster creation next time?
 Yes, it can be seen using following command:
 
 ```
-$ docker ps -a
+docker ps -a
 ```
 
 It shows the Docker containers created till now irrespective or being up or being exited.
@@ -43,11 +46,13 @@ Docker pulls(downloads) the docker machines to the local machine then accesses i
 Storing the docker image in local FS is important because they can be easily cached next time.
 
 ```
-$ docker images
+docker images
 ```
+
 or
+
 ```
-$ docker image ls
+docker image ls
 ```
 
 ![img](img/2_image.png)
@@ -57,13 +62,13 @@ $ docker image ls
 * See the Image ID using:
 
 ```
-$ docker images
+docker images
 ```
 
 * Inspect the image using
 
 ```
-$ docker inspect {first three letters of image ID or entire Image ID}
+docker inspect {first three letters of image ID or entire Image ID}
 ```
 
 ![Inspect1](img/2_inspect.png)
@@ -71,5 +76,3 @@ $ docker inspect {first three letters of image ID or entire Image ID}
 We can see **Image Layering** with following screenshot of the Inspected image.
 
 ![Inspect2](img/2_inspect1.png)
-
-

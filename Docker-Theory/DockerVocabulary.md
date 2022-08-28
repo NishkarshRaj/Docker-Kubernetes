@@ -7,6 +7,7 @@ Here is some basic vocabulary:
 **1. Docker Images:** Basis static image on which containers are built on execution.
 They represent the entire application along with the dependencies.
 It includes the following
+
 * Platform (Parent) OS image
 * Layering (See: Image Layering using RUN command)
 * Commands to be executed on build
