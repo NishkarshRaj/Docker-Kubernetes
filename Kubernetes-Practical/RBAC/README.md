@@ -1,7 +1,9 @@
 # Kubernetes RBAC within a namespace: A Practical Guide
 
 ## Preparation
+
 For this guide you'll need the following installed:
+
 - [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 - [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/)
 
