@@ -1,0 +1,14 @@
+# This service file is made in reference to deploy1.yaml file of deployment folder
+
+apiVersion: v1
+kind: Service
+metadata: 
+  name: my-service
+spec:
+  selector:
+    app: nginx
+  type: NodePort
+  ports:
+    - targetPort: 80
+      port: 80
+      nodePort: 30001

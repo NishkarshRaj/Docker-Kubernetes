@@ -1,0 +1,13 @@
+# This service file is made in reference to deploy1.yaml file of deployment folder
+# This is the default type for service in Kubernetes.
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+spec:
+  selector:
+    app: nginx
+  ports:
+    - port: 80
+      targetPort: 80
