@@ -1,0 +1,18 @@
+#Docker-compose.yaml file with mount instructions 
+
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql_container
+    environment:
+      MYSQL_ROOT_PASSWORD: my-secret-pw
+    volumes:
+      - mysql_data_volume:/var/lib/mysql
+
+volumes:
+  mysql_data_volume:
+
+
+
